@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Gemaplys_Dialogue.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="falando0000" x="0" y="0" width="288" height="463" frameX="0" frameY="-12" frameWidth="288" frameHeight="475"/>
+	<SubTexture name="falando0001" x="0" y="0" width="288" height="463" frameX="0" frameY="-12" frameWidth="288" frameHeight="475"/>
+	<SubTexture name="falando0002" x="288" y="0" width="277" height="474" frameX="-2" frameY="0" frameWidth="288" frameHeight="475"/>
+	<SubTexture name="falando0003" x="288" y="0" width="277" height="474" frameX="-2" frameY="0" frameWidth="288" frameHeight="475"/>
+	<SubTexture name="falando0004" x="565" y="0" width="276" height="474" frameX="-2" frameY="0" frameWidth="288" frameHeight="475"/>
+	<SubTexture name="falando0005" x="565" y="0" width="276" height="474" frameX="-2" frameY="0" frameWidth="288" frameHeight="475"/>
+	<SubTexture name="parado0000" x="0" y="474" width="276" height="472"/>
+	<SubTexture name="parado0001" x="0" y="474" width="276" height="472"/>
+</TextureAtlas>

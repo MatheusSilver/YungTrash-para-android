@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				660,
+				288
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left_tiba"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				203,
+				-25
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down_tiba"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				416
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up_tiba"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-98,
+				209
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right_tiba"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				240
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tiba_idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tiba",
+	"position": [
+		-320,
+		-170
+	],
+	"healthicon": "vitotiba",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-70,
+		-150
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Yunglixo_Dialogue.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="yunglixofalando0000" x="0" y="0" width="289" height="495" frameX="-200" frameY="-9" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixofalando0001" x="0" y="0" width="289" height="495" frameX="-200" frameY="-9" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixofalando0002" x="289" y="0" width="260" height="503" frameX="-218" frameY="0" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixofalando0003" x="289" y="0" width="260" height="503" frameX="-218" frameY="0" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixofalando0004" x="549" y="0" width="278" height="500" frameX="-206" frameY="-3" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixofalando0005" x="549" y="0" width="278" height="500" frameX="-206" frameY="-3" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixoparado0000" x="0" y="503" width="278" height="503" frameX="-200" frameY="-9" frameWidth="289" frameHeight="504"/>
+	<SubTexture name="yunglixoparado0001" x="0" y="503" width="278" height="503" frameX="-200" frameY="-9" frameWidth="289" frameHeight="504"/>
+</TextureAtlas>

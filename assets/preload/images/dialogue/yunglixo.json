@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		190,
+		80
+	],
+	"scale": 1.5,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				-6,
+				-4
+			],
+			"loop_name": "yunglixofalando",
+			"idle_name": "yunglixoparado"
+		}
+	],
+	"image": "Yunglixo_Dialogue"
+}

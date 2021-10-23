@@ -1,0 +1,9 @@
+potency:yunglixo:0xFFFFFFFF
+big-boy:yunglixo:0xFF01C6FF
+killer-tibba:yunglixo:0xFFFFFFFF
+crazy-pizza:mineirinho:0xFF01C6FF
+Collision:gemamugen:0xFFFFFFFF
+jokes:chicken:0xFF01C6FF
+Octopus:saiko:0xFFFFFFFF
+hot-dilf:dad:0xFFFFFFFF
+test:bf-pixel:0xFF01C6FF

@@ -1,0 +1,48 @@
+{
+	"storyName": "Yung Lixo",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"yl",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Potency",
+			"gemaplys",
+			[
+				86,
+				193,
+				253
+			]
+		],
+		[
+			"Big-boy",
+			"yunglixo",
+			[
+				255,
+				80,
+				0
+			]
+		],
+		[
+			"Killer-TIBBA",
+			"vitotiba",
+			[
+				100,
+				100,
+				100
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "weekyung"
+}

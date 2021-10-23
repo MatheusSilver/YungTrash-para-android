@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				238,
+				-42
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				-117
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				54
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-76,
+				-68
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				210,
+				258
+			],
+			"fps": 24,
+			"anim": "lol",
+			"indices": [],
+			"name": "alt_hamburgão"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				20
+			],
+			"fps": 24,
+			"anim": "lmao",
+			"indices": [],
+			"name": "alt_pimentinha"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mineirinho",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "mineirinho",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		140,
+		0
+	],
+	"camera_position": [
+		-166,
+		-120
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

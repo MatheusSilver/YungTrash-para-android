@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tiba.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down_tiba0000" x="0" y="0" width="944" height="673" frameX="-46" frameY="-54" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0001" x="0" y="0" width="944" height="673" frameX="-46" frameY="-54" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0002" x="944" y="0" width="951" height="678" frameX="-14" frameY="-14" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0003" x="944" y="0" width="951" height="678" frameX="-14" frameY="-14" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0004" x="1895" y="0" width="952" height="680" frameX="-4" frameY="-3" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0005" x="1895" y="0" width="952" height="680" frameX="-4" frameY="-3" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0006" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0007" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0008" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0009" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0010" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0011" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0012" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0013" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0014" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0015" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0016" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0017" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0018" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0019" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0020" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0021" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0022" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0023" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0024" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0025" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0026" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0027" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0028" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="down_tiba0029" x="2847" y="0" width="951" height="679" frameX="0" frameY="0" frameWidth="990" frameHeight="727"/>
+	<SubTexture name="left_tiba0000" x="0" y="680" width="1083" height="948" frameX="0" frameY="0" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0001" x="0" y="680" width="1083" height="948" frameX="0" frameY="0" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0002" x="1083" y="680" width="1082" height="948" frameX="-53" frameY="-44" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0003" x="1083" y="680" width="1082" height="948" frameX="-53" frameY="-44" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0004" x="1083" y="680" width="1082" height="948" frameX="-61" frameY="-52" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0005" x="1083" y="680" width="1082" height="948" frameX="-61" frameY="-52" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0006" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0007" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0008" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0009" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0010" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0011" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0012" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0013" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0014" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0015" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0016" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0017" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0018" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0019" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0020" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0021" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0022" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0023" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0024" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0025" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0026" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0027" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0028" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="left_tiba0029" x="1083" y="680" width="1082" height="948" frameX="-65" frameY="-57" frameWidth="1148" frameHeight="1005"/>
+	<SubTexture name="right_tiba 0000" x="2165" y="680" width="1083" height="948" frameX="-33" frameY="0" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0001" x="2165" y="680" width="1083" height="948" frameX="-33" frameY="0" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0002" x="0" y="1628" width="1083" height="948" frameX="-8" frameY="-25" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0003" x="0" y="1628" width="1083" height="948" frameX="-8" frameY="-25" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0004" x="2165" y="680" width="1083" height="948" frameX="-2" frameY="-31" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0005" x="2165" y="680" width="1083" height="948" frameX="-2" frameY="-31" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0006" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0007" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0008" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0009" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0010" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0011" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0012" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0013" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0014" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0015" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0016" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0017" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0018" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0019" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0020" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0021" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0022" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0023" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0024" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0025" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0026" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0027" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0028" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="right_tiba 0029" x="1083" y="1628" width="1082" height="948" frameX="0" frameY="-33" frameWidth="1116" frameHeight="981"/>
+	<SubTexture name="tiba_idle0000" x="2165" y="1628" width="681" height="951" frameX="0" frameY="0" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0001" x="2846" y="1628" width="681" height="952" frameX="0" frameY="0" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0002" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-2" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0003" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-5" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0004" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-9" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0005" x="0" y="2580" width="681" height="951" frameX="0" frameY="-15" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0006" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-22" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0007" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-29" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0008" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-37" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0009" x="0" y="2580" width="681" height="951" frameX="0" frameY="-44" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0010" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-49" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0011" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-53" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0012" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-56" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0013" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-58" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0014" x="0" y="2580" width="681" height="951" frameX="0" frameY="-59" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0015" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-58" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0016" x="0" y="2580" width="681" height="951" frameX="0" frameY="-57" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0017" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-54" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0018" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-50" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0019" x="0" y="2580" width="681" height="951" frameX="0" frameY="-46" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0020" x="0" y="2580" width="681" height="951" frameX="0" frameY="-40" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0021" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-33" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0022" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-26" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0023" x="0" y="2580" width="681" height="951" frameX="0" frameY="-19" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0024" x="0" y="2580" width="681" height="951" frameX="0" frameY="-13" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0025" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-8" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0026" x="2846" y="1628" width="681" height="952" frameX="0" frameY="-5" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0027" x="0" y="2580" width="681" height="951" frameX="0" frameY="-2" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0028" x="2846" y="1628" width="681" height="952" frameX="0" frameY="0" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="tiba_idle0029" x="2165" y="1628" width="681" height="951" frameX="0" frameY="0" frameWidth="681" frameHeight="1010"/>
+	<SubTexture name="up_tiba0000" x="681" y="2580" width="676" height="943" frameX="0" frameY="0" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0001" x="1357" y="2580" width="675" height="944" frameX="-1" frameY="0" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0002" x="681" y="2580" width="676" height="943" frameX="0" frameY="-35" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0003" x="1357" y="2580" width="675" height="944" frameX="-1" frameY="-36" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0004" x="681" y="2580" width="676" height="943" frameX="0" frameY="-52" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0005" x="1357" y="2580" width="675" height="944" frameX="-1" frameY="-53" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0006" x="681" y="2580" width="676" height="943" frameX="0" frameY="-58" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0007" x="1357" y="2580" width="675" height="944" frameX="-1" frameY="-59" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0008" x="1357" y="2580" width="675" height="944" frameX="-1" frameY="-61" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0009" x="1357" y="2580" width="675" height="944" frameX="-1" frameY="-64" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0010" x="2032" y="2580" width="675" height="944" frameX="-2" frameY="-68" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0011" x="2032" y="2580" width="675" height="944" frameX="-2" frameY="-73" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0012" x="1357" y="2580" width="675" height="944" frameX="-3" frameY="-80" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0013" x="2032" y="2580" width="675" height="944" frameX="-4" frameY="-88" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0014" x="1357" y="2580" width="675" height="944" frameX="-5" frameY="-95" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0015" x="2707" y="2580" width="676" height="944" frameX="-5" frameY="-102" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0016" x="2032" y="2580" width="675" height="944" frameX="-6" frameY="-107" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0017" x="681" y="2580" width="676" height="943" frameX="-7" frameY="-112" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0018" x="1357" y="2580" width="675" height="944" frameX="-7" frameY="-115" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0019" x="1357" y="2580" width="675" height="944" frameX="-7" frameY="-116" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0020" x="1357" y="2580" width="675" height="944" frameX="-7" frameY="-117" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0021" x="1357" y="2580" width="675" height="944" frameX="-7" frameY="-116" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0022" x="1357" y="2580" width="675" height="944" frameX="-7" frameY="-115" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0023" x="1357" y="2580" width="675" height="944" frameX="-7" frameY="-112" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0024" x="2032" y="2580" width="675" height="944" frameX="-6" frameY="-109" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0025" x="2032" y="2580" width="675" height="944" frameX="-6" frameY="-104" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0026" x="1357" y="2580" width="675" height="944" frameX="-5" frameY="-98" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0027" x="2032" y="2580" width="675" height="944" frameX="-4" frameY="-91" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0028" x="3383" y="2580" width="676" height="944" frameX="-3" frameY="-84" frameWidth="682" frameHeight="1061"/>
+	<SubTexture name="up_tiba0029" x="1357" y="2580" width="675" height="944" frameX="-3" frameY="-77" frameWidth="682" frameHeight="1061"/>
+</TextureAtlas>
