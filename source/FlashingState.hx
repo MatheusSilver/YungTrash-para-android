@@ -27,7 +27,7 @@ class FlashingState extends MusicBeatState
 			"Aviso HIPER ULTRA MEGA IMPORTANTE!\n\n
 			Esse mod pode causar problemas em pessoas com epilepsia!\n
 			Passe no menu de opções antes de jogar.\n\n
-			Port NÃO oficial feito por Matheus Silver!\n
+			Port NÃO oficial feito por Matheus Silver em sua PE Custom Build!\n
 			Isto não é, e nem nunca será aprovado pelo BeastlyChip ou Lone\n\n
 			Agora sim, vambora!!! Toque na tela para continuar : D.",
 			32);

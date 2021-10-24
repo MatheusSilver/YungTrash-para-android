@@ -340,11 +340,7 @@ class ChartingState extends MusicBeatState
 		{
 			var songName:String = Paths.formatToSongPath(_song.song);
 			var file:String = Paths.json(songName + '/events');
-			#if MODS_ALLOWED
-			if (#if MODS_ALLOWED FileSystem.exists(Paths.modsJson(songName + '/events')) || #end FileSystem.exists(file))
-			#else
 			if (OpenFlAssets.exists(file))
-			#end
 			{
 				clearEvents();
 				var events:SwagSong = Song.loadFromJson('events', songName);
@@ -1763,12 +1759,8 @@ class ChartingState extends MusicBeatState
 				curRenderedNoteType.add(daText);
 				daText.sprTracker = note;
 			} else {
-				if(i[3] != null && note.noteType != null && note.noteType.length > 0) {
-					var typeInt:Null<Int> = noteTypeMap.get(i[3]);
-					var theType:String = '' + typeInt;
-					if(typeInt == null) theType = '?';
-
-					var daText:AttachedFlxText = new AttachedFlxText(0, 0, 100, theType, 24);
+				if(note.noteType != 0 && i[3] != null) {
+					var daText:AttachedFlxText = new AttachedFlxText(0, 0, 100, Std.string(note.noteType), 24);
 					daText.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 					daText.xAdd = -32;
 					daText.yAdd = 6;

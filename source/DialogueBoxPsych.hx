@@ -2,20 +2,9 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.addons.text.FlxTypeText;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
-import flixel.input.FlxKeyManager;
-import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import flixel.util.FlxTimer;
-import flixel.FlxSubState;
 import haxe.Json;
-import haxe.format.JsonParser;
-#if sys
-import sys.FileSystem;
-import sys.io.File;
-#end
 import openfl.utils.Assets;
 
 using StringTools;
@@ -84,21 +73,8 @@ class DialogueCharacter extends FlxSprite
 		var characterPath:String = 'images/dialogue/' + character + '.json';
 		var rawJson = null;
 
-		#if MODS_ALLOWED
-		var path:String = Paths.mods(characterPath);
-		if (!FileSystem.exists(path)) {
-			path = Paths.getPreloadPath(characterPath);
-		}
-
-		if(!FileSystem.exists(path)) {
-			path = Paths.getPreloadPath('images/dialogue/' + DEFAULT_CHARACTER + '.json');
-		}
-		rawJson = File.getContent(path);
-
-		#else
 		var path:String = Paths.getPreloadPath(characterPath);
 		rawJson = Assets.getText(path);
-		#end
 		
 		jsonFile = cast Json.parse(rawJson);
 	}
@@ -271,19 +247,18 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			if(bgFade.alpha > 0.5) bgFade.alpha = 0.5;
 
 			#if mobile
-			var justTouched:Bool = false;
-	
-			for (touch in FlxG.touches.list)
-			{
-				justTouched = false;
-				
-				if (touch.justReleased){
-					justTouched = true;
+		    var justTouched:Bool = false;
+		    for (touch in FlxG.touches.list)
+				{
+					justTouched = false;
+
+					if (touch.justPressed){
+						justTouched = true;
+					}
 				}
-			}
-			#end
-	
-			if (PlayerSettings.player1.controls.ACCEPT #if mobile || justTouched #end && dialogueStarted == true) {
+				#end
+
+				if(FlxG.keys.justPressed.ANY #if mobile || justTouched #end) {	
 				if(!daText.finishedText) {
 					if(daText != null) {
 						daText.killTheTimer();
@@ -501,11 +476,8 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	}
 
 	public static function parseDialogue(path:String):DialogueFile {
-		#if MODS_ALLOWED
-		var rawJson = File.getContent(path);
-		#else
 		var rawJson = Assets.getText(path);
-		#end
+		
 		return cast Json.parse(rawJson);
 	}
 

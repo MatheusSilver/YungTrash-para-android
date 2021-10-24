@@ -25,7 +25,7 @@ import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
 
-import options.CustomControlsState;
+import CustomControlsState;
 import ui.FlxVirtualPad;
 
 using StringTools;
@@ -102,7 +102,7 @@ class OptionsState extends MusicBeatState
 					openSubState(new NotesSubstate());
 
 				case 'Controles Mobile':
-					MusicBeatState.switchState(new options.CustomControlsState());
+					MusicBeatState.switchState(new CustomControlsState());
 
 			}
 		}

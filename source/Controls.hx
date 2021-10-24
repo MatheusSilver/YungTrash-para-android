@@ -7,13 +7,11 @@ import flixel.input.actions.FlxActionInput;
 import flixel.input.actions.FlxActionInputDigital;
 import flixel.input.actions.FlxActionManager;
 import flixel.input.actions.FlxActionSet;
-import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
 import ui.Hitbox;
 import ui.FlxVirtualPad;
 import flixel.ui.FlxButton;
-import flixel.group.FlxGroup;
 
 #if (haxe >= "4.0.0")
 enum abstract Action(String) to String from String
@@ -388,11 +386,11 @@ class Controls extends FlxActionSet
 	public function addbutton(action:FlxActionDigital, button:FlxButton, state:FlxInputState) {
 		var input = new FlxActionInputDigitalIFlxInput(button, state);
 		trackedinputs.push(input);
-		
+
 		action.add(input);
 		//action.addInput(button, state);
 	}
-	
+
 	public function setHitBox(hitbox:Hitbox) 
 	{
 		inline forEachBound(Control.UI_UP, (action, state) -> addbutton(action, hitbox.buttonUp, state));
@@ -401,13 +399,13 @@ class Controls extends FlxActionSet
 		inline forEachBound(Control.UI_RIGHT, (action, state) -> addbutton(action, hitbox.buttonRight, state));	
 	}
 
-	
+
 	public function setVirtualPad(virtualPad:FlxVirtualPad, ?DPad:FlxDPadMode, ?Action:FlxActionMode) {
 		if (DPad == null)
 			DPad = NONE;
 		if (Action == null)
 			Action = NONE;
-		
+
 		switch (DPad)
 		{
 			case UP_DOWN:
@@ -425,7 +423,7 @@ class Controls extends FlxActionSet
 				inline forEachBound(Control.UI_DOWN, (action, state) -> addbutton(action, virtualPad.buttonDown, state));
 				inline forEachBound(Control.UI_LEFT, (action, state) -> addbutton(action, virtualPad.buttonLeft, state));
 				inline forEachBound(Control.UI_RIGHT, (action, state) -> addbutton(action, virtualPad.buttonRight, state));
-			
+
 			case NONE:
 		}
 
@@ -445,13 +443,13 @@ class Controls extends FlxActionSet
 			case NONE:
 		}
 	}
-	
+
 
 	public function removeFlxInput(Tinputs) {
 		for (action in this.digitalActions)
 		{
 			var i = action.inputs.length;
-			
+
 			while (i-- > 0)
 			{
 				var input = action.inputs[i];
@@ -465,9 +463,9 @@ class Controls extends FlxActionSet
 			}
 		}
 	}
-	
 
-	
+
+
 	#if android
 	public function addAndroidBack() {
 		// fix this later
@@ -480,6 +478,7 @@ class Controls extends FlxActionSet
 		*/
 	}
 	#end
+
 
 	override function update()
 	{
@@ -682,10 +681,12 @@ class Controls extends FlxActionSet
 	 */
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
+		var copyKeys:Array<FlxKey> = keys.copy();
+
 		#if (haxe >= "4.0.0")
-		inline forEachBound(control, (action, state) -> addKeys(action, keys, state));
+		inline forEachBound(control, (action, state) -> addKeys(action, copyKeys, state));
 		#else
-		forEachBound(control, function(action, state) addKeys(action, keys, state));
+		forEachBound(control, function(action, state) addKeys(action, copyKeys, state));
 		#end
 	}
 
@@ -695,13 +696,14 @@ class Controls extends FlxActionSet
 	 */
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
+		var copyKeys:Array<FlxKey> = keys.copy();
+
 		#if (haxe >= "4.0.0")
-		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
+		inline forEachBound(control, (action, _) -> removeKeys(action, copyKeys));
 		#else
-		forEachBound(control, function(action, _) removeKeys(action, keys));
+		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
 		#end
 	}
-
 
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
 	{
