@@ -348,7 +348,7 @@
 	<SubTexture name="BF dies0055" x="878" y="1808" width="220" height="218" frameX="0" frameY="-3" frameWidth="220" frameHeight="223"/>
 	<SubTexture name="BF dies0056" x="878" y="1808" width="220" height="218" frameX="0" frameY="-3" frameWidth="220" frameHeight="223"/>
 	<SubTexture name="BF dies0057" x="878" y="1808" width="220" height="218" frameX="0" frameY="-3" frameWidth="220" frameHeight="223"/>
-	<SubTexture name="BF idle dance0000" x="1098" y="1808" width="187" height="196" frameX="-16" frameY="-10" frameWidth="205" frameHeight="206"/>
+	<SubTexture name="BF idle dance0000" x="1100" y="1808" width="187" height="196" frameX="-16" frameY="-10" frameWidth="205" frameHeight="206"/>
 	<SubTexture name="BF idle dance0001" x="1284" y="1808" width="186" height="196" frameX="-17" frameY="-10" frameWidth="205" frameHeight="206"/>
 	<SubTexture name="BF idle dance0002" x="1470" y="1808" width="185" height="197" frameX="-19" frameY="-10" frameWidth="205" frameHeight="206"/>
 	<SubTexture name="BF idle dance0003" x="1654" y="1808" width="186" height="198" frameX="-18" frameY="-8" frameWidth="205" frameHeight="206"/>

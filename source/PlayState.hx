@@ -4,6 +4,7 @@ package;
 import Discord.DiscordClient;
 #end
 import ui.Mobilecontrols;
+import DialogueBoxPsych;
 import editors.ChartingState;
 import editors.CharacterEditorState;
 import Section.SwagSection;
@@ -768,6 +769,8 @@ class PlayState extends MusicBeatState
 					gfVersion = 'gf-christmas';
 				case 'school' | 'schoolEvil':
 					gfVersion = 'gf-pixel';
+				case 'mine': //Entra por bem ou por mal
+					gfVersion = 'ycaro';
 				default:
 					gfVersion = 'gf';
 			}
@@ -1078,33 +1081,36 @@ class PlayState extends MusicBeatState
 					boyfriend.playAnim('scared', true);
 
 				case "winter-horrorland":
-					var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+					var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 					add(blackScreen);
 					blackScreen.scrollFactor.set();
 					camHUD.visible = false;
 					inCutscene = true;
 
-					FlxTween.tween(blackScreen, {alpha: 0}, 0.7, {
-						ease: FlxEase.linear,
-						onComplete: function(twn:FlxTween) {
-							remove(blackScreen);
-						}
-					});
-					FlxG.sound.play(Paths.sound('Lights_Turn_On'));
-					snapCamFollowToPos(400, -2050);
-					FlxG.camera.focusOn(camFollow);
-					FlxG.camera.zoom = 1.5;
-
-					new FlxTimer().start(0.8, function(tmr:FlxTimer)
+					new FlxTimer().start(0.1, function(tmr:FlxTimer)
 					{
-						camHUD.visible = true;
-						remove(blackScreen);
-						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5, {
-							ease: FlxEase.quadInOut,
-							onComplete: function(twn:FlxTween)
-							{
-								startCountdown();
+						FlxTween.tween(blackScreen, {alpha: 0}, 0.7, {
+							ease: FlxEase.linear,
+							onComplete: function(twn:FlxTween) {
+								remove(blackScreen);
 							}
+						});
+						FlxG.sound.play(Paths.sound('Lights_Turn_On'));
+						snapCamFollowToPos(400, -2050);
+						FlxG.camera.focusOn(camFollow);
+						FlxG.camera.zoom = 1.5;
+
+						new FlxTimer().start(0.8, function(tmr:FlxTimer)
+						{
+							camHUD.visible = true;
+							remove(blackScreen);
+							FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5, {
+								ease: FlxEase.quadInOut,
+								onComplete: function(twn:FlxTween)
+								{
+									startCountdown();
+								}
+							});
 						});
 					});
 				case 'senpai' | 'roses' | 'thorns':
@@ -1229,19 +1235,19 @@ class PlayState extends MusicBeatState
 
 	//You don't have to add a song, just saying. You can just do "dialogueIntro(dialogue);" and it should work
 	function dialogueIntro(dialogue:Array<String>, ?song:String = null):Void
-		{
-			// TO DO: Make this more flexible, maybe?
-			inCutscene = true;
-			CoolUtil.precacheSound('dialogue');
-			CoolUtil.precacheSound('dialogueClose');
-			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogue, song);
-			doof.scrollFactor.set();
-			doof.finishThing = startCountdown;
-			doof.cameras = [camHUD];
-			add(doof);
-		}
-	
-function schoolIntro(?dialogueBox:DialogueBox):Void
+	{
+		// TO DO: Make this more flexible, maybe?
+		inCutscene = true;
+		CoolUtil.precacheSound('dialogue');
+		CoolUtil.precacheSound('dialogueClose');
+		var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogue, song);
+		doof.scrollFactor.set();
+		doof.finishThing = startCountdown;
+		doof.cameras = [camHUD];
+		add(doof);
+	}
+
+	function schoolIntro(?dialogueBox:DialogueBox):Void
 	{
 		inCutscene = true;
 		var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
@@ -2988,6 +2994,7 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 			#end
 		}
 
+
 		if (isStoryMode)
 		{
 			campaignScore += songScore;
@@ -2999,7 +3006,9 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 			{
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
-				cancelFadeTween();
+				transIn = FlxTransitionableState.defaultTransIn;
+				transOut = FlxTransitionableState.defaultTransOut;
+
 				MusicBeatState.switchState(new StoryMenuState());
 
 				// if ()
@@ -3021,9 +3030,9 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 				var difficulty:String = '' + CoolUtil.difficultyStuff[storyDifficulty][1];
 
 				trace('LOADING NEXT SONG');
-				trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+				trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
 
-				var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
+				var winterHorrorlandNext = (SONG.song.toLowerCase() == "eggnog");
 				if (winterHorrorlandNext)
 				{
 					var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
@@ -3041,7 +3050,7 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 				prevCamFollow = camFollow;
 				prevCamFollowPos = camFollowPos;
 
-				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
 
 				switch(SONG.song.toLowerCase())
@@ -3055,11 +3064,9 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 
 				if(winterHorrorlandNext) {
 					new FlxTimer().start(1.5, function(tmr:FlxTimer) {
-						cancelFadeTween();
 						LoadingState.loadAndSwitchState(new PlayState());
 					});
 				} else {
-					cancelFadeTween();
 					LoadingState.loadAndSwitchState(new PlayState());
 				}
 			}
@@ -3182,8 +3189,8 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 		rating.screenCenter();
-		rating.x = coolText.x - 40;
-		rating.y -= 60;
+		rating.y -= -250;
+		rating.x = 65;
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
@@ -3191,7 +3198,8 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 
 		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 		comboSpr.screenCenter();
-		comboSpr.x = coolText.x;
+		comboSpr.x = rating.x;
+		comboSpr.y = rating.y + 100;
 		comboSpr.acceleration.y = 600;
 		comboSpr.velocity.y -= 150;
 		comboSpr.visible = !ClientPrefs.hideHud;
@@ -3229,8 +3237,9 @@ function schoolIntro(?dialogueBox:DialogueBox):Void
 		{
 			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
 			numScore.screenCenter();
-			numScore.x = coolText.x + (43 * daLoop) - 90;
-			numScore.y += 80;
+			numScore.x = rating.x + (43 * daLoop) - 50;
+			numScore.y = rating.y + 100;
+			numScore.cameras = [camHUD];
 
 			if (!curStage.startsWith('school'))
 			{

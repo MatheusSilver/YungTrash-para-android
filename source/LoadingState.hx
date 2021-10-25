@@ -5,6 +5,7 @@ import lime.app.Future;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSprite;
+import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxTimer;
 import flixel.math.FlxMath;
 
@@ -27,16 +28,14 @@ class LoadingState extends MusicBeatState
 	
 	var target:FlxState;
 	var stopMusic = false;
-	var directory:String;
 	var callbacks:MultiCallback;
 	var targetShit:Float = 0;
 
-	function new(target:FlxState, stopMusic:Bool, directory:String)
+	function new(target:FlxState, stopMusic:Bool)
 	{
 		super();
 		this.target = target;
 		this.stopMusic = stopMusic;
-		this.directory = directory;
 	}
 
 	var funkay:FlxSprite;
@@ -70,9 +69,9 @@ class LoadingState extends MusicBeatState
 						checkLoadSong(getVocalPath());
 				}
 				checkLibrary("shared");
-				if(directory != null && directory.length > 0 && directory != 'shared') {
-					checkLibrary(directory);
-				}
+
+				var directory:String = WeekData.getWeekDirectory();
+				checkLibrary(directory);
 
 				var fadeTime = 0.5;
 				FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
@@ -96,16 +95,18 @@ class LoadingState extends MusicBeatState
 		}
 	}
 	
-	function checkLibrary(library:String) {
-		trace(Assets.hasLibrary(library));
-		if (Assets.getLibrary(library) == null)
-		{
-			@:privateAccess
-			if (!LimeAssets.libraryPaths.exists(library))
-				throw "Missing library: " + library;
+	function checkLibrary(library:String, ?doCheck:Bool = false) {
+		if(!doCheck || !ClientPrefs.lowQuality) {
+			trace(Assets.hasLibrary(library));
+			if (Assets.getLibrary(library) == null)
+			{
+				@:privateAccess
+				if (!LimeAssets.libraryPaths.exists(library))
+					throw "Missing library: " + library;
 
-			var callback = callbacks.add("library:" + library);
-			Assets.loadLibrary(library).onComplete(function (_) { callback(); });
+				var callback = callbacks.add("library:" + library);
+				Assets.loadLibrary(library).onComplete(function (_) { callback(); });
+			}
 		}
 	}
 	
@@ -151,23 +152,19 @@ class LoadingState extends MusicBeatState
 	
 	static function getNextState(target:FlxState, stopMusic = false):FlxState
 	{
-		var directory:String = 'shared';
-		var weekDir:String = StageData.forceNextDirectory;
-		StageData.forceNextDirectory = null;
-
-		if(weekDir != null && weekDir.length > 0 && weekDir != '') directory = weekDir;
-
-		Paths.setCurrentLevel(directory);
-		trace('Setting asset folder to ' + directory);
+		Paths.setCurrentLevel(WeekData.getWeekDirectory());
 
 		#if NO_PRELOAD_ALL
+		var directory:String = WeekData.getWeekDirectory();
 		var loaded:Bool = false;
 		if (PlayState.SONG != null) {
-			loaded = isSoundLoaded(getSongPath()) && (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath())) && isLibraryLoaded("shared") && isLibraryLoaded(directory);
+			loaded = isSoundLoaded(getSongPath())
+				&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
+				&& isLibraryLoaded("shared") && isLibraryLoaded(directory);
 		}
 		
 		if (!loaded)
-			return new LoadingState(target, stopMusic, directory);
+			return new LoadingState(target, stopMusic);
 		#end
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
