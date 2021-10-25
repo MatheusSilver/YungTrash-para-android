@@ -1,5 +1,6 @@
 package;
 
+import sys.io.File;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
@@ -144,10 +145,9 @@ class Paths
 		
 	
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
-	{
-		return Assets.getText(getPath(key, TEXT));
-		 //NAO IMPORTA SE TA FEIO O QUE IMPORTA E FUNCIONAR
-	}
+		{
+			return Assets.getText(getPath(key, TEXT));
+		}
 
 	inline static public function font(key:String)
 	{
@@ -169,11 +169,9 @@ class Paths
 	}
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
-	{
-		#if MODS_ALLOWED
-		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
-		#end
-	}
+		{
+			return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
+		}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
@@ -203,8 +201,18 @@ class Paths
 	}
 
 	inline static public function mods(key:String) {
-		return 'preload/' + key;
-	} //Ninguem gosta de você, agora já pra cama!
+		return 'mods/' + key;
+	}
+	inline static public function modsImages(key:String) {
+		return mods('images/' + key + '.png');
+	}
+	
+	inline static public function modsXml(key:String) {
+		return mods('images/' + key + '.xml');
+	}
+	inline static public function modsTxt(key:String) {
+		return mods('images/' + key + '.xml');
+	}
 
 	inline static public function modsJson(key:String, ?library:String) {
 		return getPath('data/$key.json', TEXT, library);
@@ -214,16 +222,6 @@ class Paths
 		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
 	}
 
-	inline static public function modsImages(key:String, ?library:String):Dynamic {
-		return getPath('images/$key.png', IMAGE, library);
-	}
-
-	inline static public function modsXml(key:String, ?library:String) {
-		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
-	}
  //This is the power of GAMBIAARAAAAAAAAAAAAAAAAAAAA
-	inline static public function modsTxt(key:String, ?library:String) {
-		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
-	}
 	#end
 }

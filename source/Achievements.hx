@@ -11,7 +11,7 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
-		["Freaky on a Friday Night",	"Jogue numa Sexta... A noite Yeah.",					 true],
+		["Freaky on a Friday Night",	"Jogue numa Sexta... A noite Yeah.",					 false],
 		["She Calls Me Daddy Too",		"Beat Week 1 on Hard with no Misses.",					true],
 		["No More Tricks",				"Beat Week 2 on Hard with no Misses.",					true],
 		["Call Me The Hitman",			"Beat Week 3 on Hard with no Misses.",					true],
@@ -20,13 +20,13 @@ class Achievements {
 		["Highscore!!",					"Beat Week 6 on Hard with no Misses.",					true],
 		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",					true],
 		["Isso foi um Funkin' Disastre!",	"Acerte menos que 20% da musica.",		false],
-		["Perfecionista",				"Fa�a 100% em uma musica, confio em ti.",				false],
+		["Perfecionista",				"tenha 100% em uma musica, confio em ti.",				false],
 		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",				true],
 		["Cantando, mas tipo MUITO...?",		"Segure uma nota por 20 segundos",						false],
 		["Hiperativo",					"Termine uma musica sem voltar para a animacao padrao.",					false],
-		["S� n�s dois",			"Termine uma musica com apenas duas teclas.",				false],
+		["Apenas dois",			"Termine uma musica com apenas duas teclas.",				false],
 		["Torradeira Gamer",				"Por um acaso, voce jogou o mod numa torradeira?",			false],
-		["Secreto",					"Ven�a o \"Test\".",		 false]
+		["Secreto",					"ganhe o \"Test\".",		 false]
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?

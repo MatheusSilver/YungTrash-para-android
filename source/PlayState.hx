@@ -50,7 +50,6 @@ import editors.CharacterEditorState;
 import Achievements;
 import StageData;
 import FunkinLua;
-import DialogueBoxPsych;
 
 #if sys
 import sys.FileSystem;
@@ -178,7 +177,6 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
-	var dialogueJson:DialogueFile = null;
 
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
@@ -841,12 +839,8 @@ class PlayState extends MusicBeatState
 			add(halloweenWhite);
 		}
 
-		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
-		if (OpenFlAssets.exists(file)) {
-			dialogueJson = DialogueBoxPsych.parseDialogue(file);
-		}
-
-		var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); //Checks for vanilla/Senpai dialogue
+		var lowercaseSong:String = SONG.song.toLowerCase();
+		var file:String = Paths.txt(lowercaseSong + '/' + lowercaseSong + 'Dialogue');
 		if (OpenFlAssets.exists(file)) {
 			dialogue = CoolUtil.coolTextFile(file);
 		}
@@ -855,7 +849,6 @@ class PlayState extends MusicBeatState
 		// doof.y = FlxG.height * 0.5;
 		doof.scrollFactor.set();
 		doof.finishThing = startCountdown;
-		doof.nextDialogueThing = startNextDialogue;
 
 		Conductor.songPosition = -5000;
 
@@ -1118,7 +1111,7 @@ class PlayState extends MusicBeatState
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'potency' | 'big-boy':
-					startDialogue(dialogueJson);
+					dialogueIntro(dialogue);
 
 				default:
 					startCountdown();
@@ -1234,28 +1227,21 @@ class PlayState extends MusicBeatState
 		startCountdown();
 	}
 
-	var dialogueCount:Int = 0;
-	//You don't have to add a song, just saying. You can just do "dialogueIntro(dialogueJson);" and it should work
-	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
-	{
-		// TO DO: Make this more flexible, maybe?
-		if(dialogueFile.dialogue.length > 0) {
+	//You don't have to add a song, just saying. You can just do "dialogueIntro(dialogue);" and it should work
+	function dialogueIntro(dialogue:Array<String>, ?song:String = null):Void
+		{
+			// TO DO: Make this more flexible, maybe?
 			inCutscene = true;
 			CoolUtil.precacheSound('dialogue');
 			CoolUtil.precacheSound('dialogueClose');
-			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, song);
+			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogue, song);
 			doof.scrollFactor.set();
 			doof.finishThing = startCountdown;
-			doof.nextDialogueThing = startNextDialogue;
 			doof.cameras = [camHUD];
 			add(doof);
-		} else {
-			FlxG.log.warn('Your dialogue file is badly formatted!');
-			startCountdown();
 		}
-	}
-
-	function schoolIntro(?dialogueBox:DialogueBox):Void
+	
+function schoolIntro(?dialogueBox:DialogueBox):Void
 	{
 		inCutscene = true;
 		var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
@@ -1274,12 +1260,11 @@ class PlayState extends MusicBeatState
 		senpaiEvil.screenCenter();
 		senpaiEvil.x += 300;
 
-		var songName:String = Paths.formatToSongPath(SONG.song);
-		if (songName == 'roses' || songName == 'thorns')
+		if (SONG.song.toLowerCase() == 'roses' || SONG.song.toLowerCase() == 'thorns')
 		{
 			remove(black);
 
-			if (songName == 'thorns')
+			if (SONG.song.toLowerCase() == 'thorns')
 			{
 				add(red);
 				camHUD.visible = false;
@@ -1298,7 +1283,7 @@ class PlayState extends MusicBeatState
 			{
 				if (dialogueBox != null)
 				{
-					if (Paths.formatToSongPath(SONG.song) == 'thorns')
+					if (SONG.song.toLowerCase() == 'thorns')
 					{
 						add(senpaiEvil);
 						senpaiEvil.alpha = 0;
@@ -1504,11 +1489,6 @@ class PlayState extends MusicBeatState
 				// generateSong('fresh');
 			}, 5);
 		}
-	}
-
-	function startNextDialogue() {
-		dialogueCount++;
-		callOnLuas('onNextDialogue', [dialogueCount]);
 	}
 
 	var previousFrameTime:Int = 0;

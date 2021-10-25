@@ -27,7 +27,6 @@ class DialogueBox extends FlxSpriteGroup
 	var dropText:FlxText;
 
 	public var finishThing:Void->Void;
-	public var nextDialogueThing:Void->Void = null;
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
@@ -232,12 +231,12 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					dialogueList.remove(dialogueList[0]);
 					startDialogue();
-					FlxG.sound.play(Paths.sound('clickText'), 0.8);
+					FlxG.sound.play(Paths.sound('clickText'), 0.8);	
 				}
 			}
 			else if (dialogueStarted)
 			{
-				FlxG.sound.play(Paths.sound('clickText'), 0.8);
+				FlxG.sound.play(Paths.sound('clickText'), 0.8);	
 				swagDialogue.skip();
 			}
 		}
@@ -280,9 +279,6 @@ class DialogueBox extends FlxSpriteGroup
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
 				}
-		}
-		if(nextDialogueThing != null) {
-			nextDialogueThing();
 		}
 	}
 

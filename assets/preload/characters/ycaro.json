@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				22,
-				-1
+				119,
+				264
 			],
 			"anim": "cheer",
 			"fps": 24,
@@ -25,8 +25,8 @@
 	"no_antialiasing": false,
 	"image": "characters/ycaro",
 	"position": [
-		-25,
-		220
+		0,
+		200
 	],
 	"healthicon": "",
 	"flip_x": false,

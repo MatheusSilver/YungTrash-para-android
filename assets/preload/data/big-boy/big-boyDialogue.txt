@@ -1,0 +1,22 @@
+yunglixo:left bf:right
+:1:talk:0.05:normal:beep?
+:0:talk:0.05:normal:cansei disso.
+:0:talk:0.05:normal:pera.
+:0:talk:0.05:normal:quando foi que eu troquei de roupa?
+:1:talk:0.05:normal:e eu vou saber
+:0:talk:0.05:normal:o animador deve ter tido preguica de animar tantos frames
+:0:talk:0.05:normal:para o incrivel Yung Lixo
+:0:talk:0.05:normal:enfim.
+:0:talk:0.05:normal:tu se acha fodao e acha que pode derrotar qualquer um na rima
+:0:talk:0.05:normal:mas eu nao sou qualquer um.
+:1:talk:0.05:normal:skido do-
+:0:talk:0.05:normal:CALA A BOCA!
+:0:talk:0.05:normal:cansei desses bep bops chatos.
+:0:talk:0.05:normal:eu sou Yung Lixo e grave bem esse nome.
+:0:talk:0.05:normal:serei o unico homem que ira te derrotar!
+:1:talk:0.05:normal:...
+:1:talk:0.05:normal:duvido.
+:0:talk:0.05:angry:QUE???
+:1:talk:0.05:normal:bep boo bap
+:0:talk:0.05:normal:enfim...
+:0:talk:0.05:angry:vamos acabar logo com isso.

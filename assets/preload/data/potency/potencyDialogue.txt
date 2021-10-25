@@ -1,0 +1,22 @@
+gemaplys:left bf:right
+:1:talk:0.05:normal:bop ba
+:0:talk:0.05:normal:o que foi isso?
+:0:talk:0.05:normal:ah mai nem ferrando
+:1:talk:0.05:normal:skido pee bo pa
+:0:talk:0.05:normal:quais as chances de eu batalhar com voce?
+:0:talk:0.05:normal:onde em pelotas?
+:1:talk:0.05:normal:skido?
+:0:talk:0.05:normal:verdade, faz sentido.
+:0:talk:0.05:normal:deixando isso pra la.
+:0:talk:0.05:normal:como posso sair daqui?
+:1:talk:0.05:normal:skido pee boo pa bo, stirirupaponopepo.
+:0:talk:0.05:normal:ah entao, so eu cantar contigo...
+:0:talk:0.05:normal:em uma batalha de rap?
+:1:talk:0.05:normal:"yep
+:0:talk:0.05:normal:nao fazia ideia, que genial.
+:0:talk:0.05:normal:nossa ate arrepiei.
+:1:talk:0.05:normal:coolswag
+:0:talk:0.05:angry:enfim, vamos acabar logo com isso.
+:1:talk:0.05:angry:BEEP!
+:0:talk:0.05:normal:coolswag
+:1:talk:0.05:angry:coolswag
