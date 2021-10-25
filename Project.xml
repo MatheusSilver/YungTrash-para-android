@@ -76,8 +76,6 @@
 		<library name="week6"         preload="false" />
 	</section>
 	
-	<assets path="plugins/"             rename=''               />
-	<assets path="dlls/"                rename=''               />
 	<assets path="assets/videos"        library="videos"        />
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>

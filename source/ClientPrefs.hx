@@ -25,6 +25,10 @@ class ClientPrefs {
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
+	public static var easteregg:Bool = false;
+	public static var cenoptim:Bool = true;
+	public static var dacut:Bool = false;
+	public static var dagf:Bool = false;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -64,6 +68,9 @@ class ClientPrefs {
 
 	public static function saveSettings() {
 		FlxG.save.data.downScroll = downScroll;
+		FlxG.save.data.dacut = dacut;
+		FlxG.save.data.dagf = dagf;
+		FlxG.save.data.cenoptim = cenoptim;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
@@ -80,6 +87,7 @@ class ClientPrefs {
 		FlxG.save.data.imagesPersist = imagesPersist;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.hideTime = hideTime;
+		FlxG.save.data.easteregg = easteregg;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -105,6 +113,15 @@ class ClientPrefs {
 		if(FlxG.save.data.middleScroll != null) {
 			middleScroll = FlxG.save.data.middleScroll;
 		}
+		if(FlxG.save.data.cenoptim != null) {
+			cenoptim = FlxG.save.data.cenoptim;
+		}
+		if(FlxG.save.data.dacut != null) {
+			dacut = FlxG.save.data.dacut;
+		}
+		if(FlxG.save.data.dagf != null) {
+			dagf = FlxG.save.data.dagf;
+		}
 		if(FlxG.save.data.showFPS != null) {
 			showFPS = FlxG.save.data.showFPS;
 			if(Main.fpsVar != null) {
@@ -113,6 +130,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.flashing != null) {
 			flashing = FlxG.save.data.flashing;
+		}
+		if(FlxG.save.data.easteregg != null) {
+			easteregg = FlxG.save.data.easteregg;
 		}
 		if(FlxG.save.data.globalAntialiasing != null) {
 			globalAntialiasing = FlxG.save.data.globalAntialiasing;

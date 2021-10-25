@@ -350,6 +350,7 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'stage': //Week 1
+			if(ClientPrefs.cenoptim){
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
 
@@ -374,6 +375,7 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
+			}
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -589,31 +591,40 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'quarto':
+			if(ClientPrefs.cenoptim){
 				var bg:BGSprite = new BGSprite('quarto/quarto', 0, 0, 0.8, 0.8);
 				bg.setGraphicSize(Std.int(bg.width * 0.8));
 				bg.updateHitbox();
 				add(bg);
+			}
 
 				case 'mugen':
+				if(ClientPrefs.cenoptim){
 				var bg:BGSprite = new BGSprite('mugen/mugen', 0, 0, 0.8, 0.8);
 				bg.setGraphicSize(Std.int(bg.width * 0.8));
 				bg.updateHitbox();
 				add(bg);
+				}
 
 			case 'space':
+			if(ClientPrefs.cenoptim){
 				defaultCamZoom = 0.6;
 				var bg:BGSprite = new BGSprite('quarto/space', -1800, -820, 0.8, 0.8);
 				bg.setGraphicSize(Std.int(bg.width * 1.6));
 				bg.updateHitbox();
 				add(bg);	
+			}
 
 			case 'mine': //Week 5 - Cocoa, Eggnog
+			if(ClientPrefs.cenoptim){
 				var bg:BGSprite = new BGSprite('mine/cenario', -500, -200, 0.9, 0.9);
 				bg.setGraphicSize(Std.int(bg.width * 0.8));
 				bg.updateHitbox();
 				add(bg);
+			}
 
 			case 'minerworld':
+			if(ClientPrefs.cenoptim){
 				
 				var bg:BGSprite = new BGSprite('miner/minersky', 0, 0, 0.8, 0.8);
 				bg.setGraphicSize(Std.int(bg.width * 0.8));
@@ -645,7 +656,10 @@ class PlayState extends MusicBeatState
 				bg.updateHitbox();
 				add(bg);
 
+			}
+
 			case 'farm':
+			if(ClientPrefs.cenoptim){
 
 				defaultCamZoom = 1.1;
 				
@@ -678,6 +692,8 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 1.6));
 				bg.updateHitbox();
 				add(bg);
+
+			}
 
 
 			case 'schoolEvil': //Week 6 - Thorns
@@ -760,6 +776,7 @@ class PlayState extends MusicBeatState
 		#end
 
 		var gfVersion:String = SONG.player3;
+
 		if(gfVersion == null || gfVersion.length < 1) {
 			switch (curStage)
 			{
@@ -784,8 +801,11 @@ class PlayState extends MusicBeatState
 		boyfriendGroup = new FlxTypedGroup<Boyfriend>();
 		dadGroup = new FlxTypedGroup<Character>();
 		gfGroup = new FlxTypedGroup<Character>();
-
+		if(FlxG.save.data.dagf){
+			gf = new Character(GF_X, GF_Y, 'invisibru');
+		} else {
 		gf = new Character(GF_X, GF_Y, gfVersion);
+		}
 		gf.x += gf.positionArray[0];
 		gf.y += gf.positionArray[1];
 		gf.scrollFactor.set(0.95, 0.95);
@@ -3056,7 +3076,10 @@ class PlayState extends MusicBeatState
 				switch(SONG.song.toLowerCase())
 				{
 					case 'killer-tibba':
-					LoadingState.loadAndSwitchState(new VideoState("assets/videos/yungcutscene", new PlayState()));
+						if(!FlxG.save.data.dacut){
+						LoadingState.loadAndSwitchState(new VideoState("assets/videos/yungcutscene", new PlayState()));
+						} //Eu sei isso ta uma porra feia, mas quem liga?
+					LoadingState.loadAndSwitchState(new PlayState());
 
 					default:
 					LoadingState.loadAndSwitchState(new PlayState());
@@ -3191,6 +3214,7 @@ class PlayState extends MusicBeatState
 		rating.screenCenter();
 		rating.y -= -250;
 		rating.x = 65;
+		rating.cameras = [camHUD];
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
@@ -3202,6 +3226,7 @@ class PlayState extends MusicBeatState
 		comboSpr.y = rating.y + 100;
 		comboSpr.acceleration.y = 600;
 		comboSpr.velocity.y -= 150;
+		comboSpr.cameras = [camHUD];
 		comboSpr.visible = !ClientPrefs.hideHud;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);

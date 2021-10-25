@@ -4,6 +4,7 @@ import flixel.text.FlxText;
 import flixel.FlxState;
 import flixel.FlxG;
 import flixel.FlxSubState;
+import FlashingStateDois;
 
 import extension.webview.WebView;
 
@@ -21,10 +22,18 @@ class VideoState extends MusicBeatState
 	{
 		super();
 
-		text = new FlxText(0, 0, 0, "toque para continuar", 48);
+		if(ClientPrefs.easteregg){
+		text = new FlxText(0, 0, 0, "Easter egg parça \nagora toque para continuar", 48); //Eu aprendi a mexer  nas opçoes só pra isso, por favor me mata
 		text.screenCenter();
 		text.alpha = 0;
 		add(text);
+		} else {
+			text = new FlxText(0, 0, 0, "toque para continuar", 48);
+			text.screenCenter();
+			text.alpha = 0;
+			add(text);
+		}
+
 
 		nextState = toTrans;
 

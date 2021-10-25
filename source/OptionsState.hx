@@ -699,6 +699,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
+		'Cenarios Visiveis',
+		'Pular Cutscenes',
+		'Remover GF',
 		'Camera Zooms'
 		,'FPS Counter'
 	];
@@ -859,6 +862,13 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Flashing Lights':
 						ClientPrefs.flashing = !ClientPrefs.flashing;
 
+					case 'Cenarios Visiveis':
+						ClientPrefs.cenoptim = !ClientPrefs.cenoptim;
+
+					case 'Pular Cutscenes':
+						ClientPrefs.dacut = !ClientPrefs.dacut;
+
+
 					case 'Violence':
 						ClientPrefs.violence = !ClientPrefs.violence;
 
@@ -876,6 +886,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Camera Zooms':
 						ClientPrefs.camZooms = !ClientPrefs.camZooms;
+					case 'Remover GF':
+						ClientPrefs.dagf = !ClientPrefs.dagf;
 
 					case 'Hide HUD':
 						ClientPrefs.hideHud = !ClientPrefs.hideHud;
@@ -973,8 +985,14 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "yuhu as setas fazem kabum (no bom sentido)";
 			case 'Flashing Lights':
 				daText = "Deixe desmarcado caso tenha problemas com epilepsia";
+			case 'Cenarios Visiveis':
+				daText = "Tira o cenário do game e deixa o jogo mais leve \n Só que mais feio \n tem um pequeno risco de deslocar os personagens";
+			case 'Pular Cutscenes':
+				daText = "Auto-Explicativo eu acho";	
 			case 'Camera Zooms':
 				daText = "Se desmacardo, a camera nao vai ter mais aqueles zooms muito do locos";
+			case 'Remover GF':
+				daText = "Auto-Explicativo tambem eu acho";
 			case 'Hide HUD':
 				daText = "Se marcado, tua tela vai ficar limpinha (literalmente ^^)";
 			case 'Hide Song Length':
@@ -1044,6 +1062,12 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.noteSplashes;
 					case 'Flashing Lights':
 						daValue = ClientPrefs.flashing;
+					case 'Cenarios Visiveis':
+						daValue = ClientPrefs.cenoptim;
+					case 'Pular Cutscenes':
+						daValue = ClientPrefs.dacut;
+					case 'Remover GF':
+						daValue = ClientPrefs.dagf;
 					case 'Downscroll':
 						daValue = ClientPrefs.downScroll;
 					case 'Middlescroll':
