@@ -193,7 +193,7 @@ class StoryMenuState extends MusicBeatState
 		changeWeek();
 
 		#if mobileC
-		addVirtualPad(FULL, A_B);
+		addVirtualPad(LEFT_RIGHT, A_B);
 		#end
 
 		super.create();
@@ -224,17 +224,6 @@ class StoryMenuState extends MusicBeatState
 
 		if (!movedBack && !selectedWeek)
 		{
-			if (controls.UI_UP_P)
-			{
-				changeWeek(-1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-
-			if (controls.UI_DOWN_P)
-			{
-				changeWeek(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
 
 			if (controls.UI_RIGHT)
 				rightArrow.animation.play('press')

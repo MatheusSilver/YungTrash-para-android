@@ -67,7 +67,7 @@ class FlashingStateDois extends MusicBeatState
 					ClientPrefs.easteregg = true;
 					ClientPrefs.flashing = false;
 					ClientPrefs.saveSettings();
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+					FlxG.sound.play(Paths.sound('secretSound')); //Porque é legal! Apenas!
 					FlxFlicker.flicker(warnText, 1, 0.1, false, true, function(flk:FlxFlicker) {
 						new FlxTimer().start(0.5, function (tmr:FlxTimer) {
 							LoadingState.loadAndSwitchState(new VideoState('assets/videos/bigshot', new TitleState()));

@@ -3,8 +3,6 @@ package;
 import flixel.text.FlxText;
 import flixel.FlxState;
 import flixel.FlxG;
-import flixel.FlxSubState;
-import FlashingStateDois;
 
 import extension.webview.WebView;
 
@@ -48,6 +46,7 @@ class VideoState extends MusicBeatState
 	public override function update(dt:Float) {
 		for (touch in FlxG.touches.list)
 			if (touch.justReleased)
+				ClientPrefs.easteregg = false; //I FORGOR :skull:
 				onClose();
 
 		super.update(dt);	

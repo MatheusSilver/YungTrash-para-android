@@ -1137,7 +1137,10 @@ class PlayState extends MusicBeatState
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'potency' | 'big-boy':
+					if(!ClientPrefs.dadia){
 					dialogueIntro(dialogue);
+					}
+					startCountdown(); //Sussy gambiarra, mas funciona!
 
 				default:
 					startCountdown();
@@ -2426,12 +2429,13 @@ class PlayState extends MusicBeatState
 					}
 				}
 
+
 				if(daNote.mustPress && cpuControlled) {
 					if(daNote.isSustainNote) {
 						if(daNote.canBeHit) {
 							goodNoteHit(daNote);
 						}
-					} else if(daNote.strumTime <= Conductor.songPosition || (daNote.isSustainNote && daNote.canBeHit && daNote.mustPress)) {
+					} else if(daNote.strumTime <= Conductor.songPosition) {
 						goodNoteHit(daNote);
 					}
 				}
@@ -2443,51 +2447,57 @@ class PlayState extends MusicBeatState
 				if(ClientPrefs.downScroll) doKill = daNote.y > FlxG.height;
 
 				if (doKill)
-				{
-					if (daNote.mustPress && !cpuControlled)
 					{
-						if (daNote.tooLate || !daNote.wasGoodHit)
+						if (daNote.mustPress && !cpuControlled)
 						{
-							if(!endingSong) {
-								//Dupe note remove
-								notes.forEachAlive(function(note:Note) {
-									if (daNote != note && daNote.mustPress && daNote.noteData == note.noteData && daNote.isSustainNote == note.isSustainNote && Math.abs(daNote.strumTime - note.strumTime) < 10) {
-										note.kill();
-										notes.remove(note, true);
-										note.destroy();
-									}
-								});
-
-								if(!daNote.ignoreNote) {
-									health -= 0.0475; //For testing purposes
-									songMisses++;
-									vocals.volume = 0;
-									RecalculateRating();
-
-									switch (daNote.noteData % 4)
-									{
-										case 0:
-											boyfriend.playAnim('singLEFTmiss', true);
-										case 1:
-											boyfriend.playAnim('singDOWNmiss', true);
-										case 2:
-											boyfriend.playAnim('singUPmiss', true);
+							if (daNote.tooLate || !daNote.wasGoodHit)
+							{
+								if(!endingSong) {
+									//Dupe note remove
+									notes.forEachAlive(function(note:Note) {
+										if (daNote != note && daNote.mustPress && daNote.noteData == note.noteData && daNote.isSustainNote == note.isSustainNote && Math.abs(daNote.strumTime - note.strumTime) < 10) {
+											note.kill();
+											notes.remove(note, true);
+											note.destroy();
+										}
+									});
+	
+									switch(daNote.noteType) {
 										case 3:
-											boyfriend.playAnim('singRIGHTmiss', true);
+											//Hurt note, does nothing.
+	
+										default:
+											health -= 0.0475; //For testing purposes
+											songMisses++;
+											vocals.volume = 0;
+											RecalculateRating();
+											
+											if(ClientPrefs.ghostTapping	) {
+												combo = 0;
+												switch (daNote.noteData % 4)
+												{
+													case 0:
+														boyfriend.playAnim('singLEFTmiss', true);
+													case 1:
+														boyfriend.playAnim('singDOWNmiss', true);
+													case 2:
+														boyfriend.playAnim('singUPmiss', true);
+													case 3:
+														boyfriend.playAnim('singRIGHTmiss', true);
+												}
+											}
 									}
-									callOnLuas('noteMiss', [daNote.noteData, daNote.noteType]);
 								}
 							}
 						}
+	
+						daNote.active = false;
+						daNote.visible = false;
+	
+						daNote.kill();
+						notes.remove(daNote, true);
+						daNote.destroy();
 					}
-
-					daNote.active = false;
-					daNote.visible = false;
-
-					daNote.kill();
-					notes.remove(daNote, true);
-					daNote.destroy();
-				}
 			});
 		}
 		checkEventNote();

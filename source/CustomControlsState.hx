@@ -7,7 +7,6 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import ui.FlxVirtualPad;
-import flixel.util.FlxSave;
 import flixel.math.FlxPoint;
 import haxe.Json;
 import ui.Hitbox;

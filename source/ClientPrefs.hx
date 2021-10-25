@@ -29,6 +29,7 @@ class ClientPrefs {
 	public static var cenoptim:Bool = true;
 	public static var dacut:Bool = false;
 	public static var dagf:Bool = false;
+	public static var dadia:Bool = false;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -88,6 +89,7 @@ class ClientPrefs {
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.hideTime = hideTime;
 		FlxG.save.data.easteregg = easteregg;
+		FlxG.save.data.dadia = dadia;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -112,6 +114,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.middleScroll != null) {
 			middleScroll = FlxG.save.data.middleScroll;
+		}
+		if(FlxG.save.data.dadia != null) {
+			dadia = FlxG.save.data.dadia;
 		}
 		if(FlxG.save.data.cenoptim != null) {
 			cenoptim = FlxG.save.data.cenoptim;
