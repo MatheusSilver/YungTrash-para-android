@@ -1,0 +1,151 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "beep?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "cansei disso.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yunglixo",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "pera."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yunglixo",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "quando foi que eu troquei de roupa?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "e eu vou saber"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yunglixo",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "o animador deve ter tido preguica de animar tantos frames"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yunglixo",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "para o incrivel Yung Lixo"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yunglixo",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "enfim."
+		},
+		{
+			"expression": "talk",
+			"text": "tu se acha fodao e acha que pode derrotar qualquer um na rima",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "mas eu nao sou qualquer um.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "skido do-",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "CALA A BOCA!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "cansei desses bep bops chatos.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "eu sou Yung Lixo e grave bem esse nome.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "serei o unico homem que ira te derrotar!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "duvido.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "QUE???",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "bep boo bap",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "enfim...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		},
+		{
+			"expression": "talk",
+			"text": "vamos acabar logo com isso.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "yunglixo"
+		}
+	]
+}

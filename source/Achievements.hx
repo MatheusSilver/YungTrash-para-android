@@ -20,7 +20,7 @@ class Achievements {
 		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",					true],
 		["Isso foi um Funkin' Disastre!",	"Acerte menos que 20% da musica.",		false],
 		["Perfecionista",				"tenha 100% em uma musica, confio em ti.",				false],
-		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",				true],
+		["HIPERLINK BLOCKED",			"Ache a cutscene secreta dentro do game.",				false],
 		["Cantando, mas tipo MUITO...?",		"Segure uma nota por 20 segundos",						false],
 		["Hiperativo",					"Termine uma musica sem voltar para a animacao padrao.",					false],
 		["Apenas dois",			"Termine uma musica com apenas duas teclas.",				false],

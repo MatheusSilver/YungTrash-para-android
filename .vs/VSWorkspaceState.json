@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\art\\flashFiles",
+    "\\assets",
     "\\assets\\preload",
+    "\\assets\\preload\\characters",
     "\\assets\\preload\\images\\characters",
-    "\\assets\\shared",
     "\\assets\\shared\\images",
-    "\\assets\\shared\\images\\characters",
-    "\\source"
+    "\\assets\\shared\\images\\characters"
   ],
-  "SelectedNode": "\\source\\Controls.hx",
+  "SelectedNode": "\\assets\\preload\\characters\\vito.json",
   "PreviewInSolutionExplorer": false
 }

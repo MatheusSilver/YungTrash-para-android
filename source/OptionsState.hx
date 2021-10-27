@@ -33,7 +33,7 @@ using StringTools;
 // TO DO: Redo the menu creation system for not being as dumb
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Configuracoes', 'Estilo de nota', 'Controles Mobile'];
+	var options:Array<String> = ['Configuracoes', 'Estilo de nota', 'Controles Mobile', 'Controles para Teclado'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
@@ -103,6 +103,9 @@ class OptionsState extends MusicBeatState
 
 				case 'Controles Mobile':
 					MusicBeatState.switchState(new CustomControlsState());
+
+				case 'Controles para Teclado':
+					openSubState(new ControlsSubstate());
 
 			}
 		}
@@ -465,6 +468,11 @@ class ControlsSubstate extends MusicBeatSubstate {
 				addBindTexts(optionText);
 			}
 		}
+
+		#if mobileC
+		addVirtualPad(NONE, A_B); //CAUTELOSOS MOMENT
+		#end
+
 		changeSelection();
 	}
 
@@ -691,9 +699,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'FPS', //Apparently 120FPS isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		#end
 		'GAMEPLAY',
+		'Som de OSU',
 		'Downscroll',
 		'Middlescroll',
-		'Ghost Tapping',
 		'Delay na nota',
 		'Efeito Splash na nota',
 		'Ocultar HUD',
@@ -873,7 +881,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 						ClientPrefs.dadia = !ClientPrefs.dadia;
 
 
-					case 'Violence':
+					case 'Som de OSU':
 						ClientPrefs.violence = !ClientPrefs.violence;
 
 					case 'Swearing':
@@ -983,7 +991,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "Se desmarcado, o jogo fica mais hardcore\nresumindo, tu perde vida por errar fiote.";
 			case 'Swearing':
 				daText = "Sei la que disgrama e isso";
-			case 'Violence':
+			case 'Som de OSU':
 				daText = "sei la que disgrama e isso tambem";
 			case 'Efeito Splash na nota':
 				daText = "yuhu as setas fazem kabum (no bom sentido)";
@@ -1084,7 +1092,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.ghostTapping;
 					case 'Swearing':
 						daValue = ClientPrefs.cursing;
-					case 'Violence':
+					case 'Som de OSU':
 						daValue = ClientPrefs.violence;
 					case 'Efeitos de camera':
 						daValue = ClientPrefs.camZooms;

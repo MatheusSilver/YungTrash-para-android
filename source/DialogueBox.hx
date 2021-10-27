@@ -27,6 +27,8 @@ class DialogueBox extends FlxSpriteGroup
 	var dropText:FlxText;
 
 	public var finishThing:Void->Void;
+	public var nextDialogueThing:Void->Void = null;
+	public var skipDialogueThing:Void->Void = null;
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
@@ -193,8 +195,7 @@ class DialogueBox extends FlxSpriteGroup
 			}
 		}
 		#end
-
-		if (PlayerSettings.player1.controls.ACCEPT #if mobile || justTouched #end && dialogueStarted == true)
+		if (FlxG.keys.justPressed.ANY #if mobile || justTouched #end)
 		{
 			if (dialogueEnded)
 			{
@@ -231,13 +232,17 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					dialogueList.remove(dialogueList[0]);
 					startDialogue();
-					FlxG.sound.play(Paths.sound('clickText'), 0.8);	
+					FlxG.sound.play(Paths.sound('clickText'), 0.8);
 				}
 			}
 			else if (dialogueStarted)
 			{
-				FlxG.sound.play(Paths.sound('clickText'), 0.8);	
+				FlxG.sound.play(Paths.sound('clickText'), 0.8);
 				swagDialogue.skip();
+				
+				if(skipDialogueThing != null) {
+					skipDialogueThing();
+				}
 			}
 		}
 		
@@ -279,6 +284,9 @@ class DialogueBox extends FlxSpriteGroup
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
 				}
+		}
+		if(nextDialogueThing != null) {
+			nextDialogueThing();
 		}
 	}
 

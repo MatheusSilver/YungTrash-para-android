@@ -19,6 +19,8 @@ class PauseSubState extends MusicBeatSubstate
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
+	public static var transCamera:FlxCamera;
+
 	var pauseMusic:FlxSound;
 	var practiceText:FlxText;
 	var botplayText:FlxText;
@@ -148,6 +150,7 @@ class PauseSubState extends MusicBeatSubstate
 					var poop = Highscore.formatSong(name, curSelected);
 					PlayState.SONG = Song.loadFromJson(poop, name);
 					PlayState.storyDifficulty = curSelected;
+					CustomFadeTransition.nextCamera = transCamera;
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
 					PlayState.changedDifficulty = true;
@@ -168,6 +171,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.usedPractice = true;
 					practiceText.visible = PlayState.practiceMode;
 				case "Reiniciar":
+					CustomFadeTransition.nextCamera = transCamera;
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
 				case 'Botplay':
@@ -177,6 +181,7 @@ class PauseSubState extends MusicBeatSubstate
 				case "Voltar ao menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
+					CustomFadeTransition.nextCamera = transCamera;
 					if(PlayState.isStoryMode) {
 						MusicBeatState.switchState(new StoryMenuState());
 					} else {

@@ -296,7 +296,7 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignMisses = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-			if(curWeek == 0 && !FlxG.save.data.dacut)
+			if(curWeek == 0 && !ClientPrefs.dacut)
 			{
 				LoadingState.loadAndSwitchState(new VideoState('assets/videos/gemacutscene', new PlayState()));
 			}

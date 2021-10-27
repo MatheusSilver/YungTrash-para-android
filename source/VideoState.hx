@@ -16,6 +16,9 @@ class VideoState extends MusicBeatState
 
 	var text:FlxText;
 
+	//var firsttimeeaster:Bool = true;
+	//Solucao burra
+
 	public function new(source:String, toTrans:FlxState)
 	{
 		super();
@@ -46,8 +49,7 @@ class VideoState extends MusicBeatState
 	public override function update(dt:Float) {
 		for (touch in FlxG.touches.list)
 			if (touch.justReleased)
-				ClientPrefs.easteregg = false; //I FORGOR :skull:
-				onClose();
+				onClose(); //hmmmm maybe
 
 		super.update(dt);	
 	}

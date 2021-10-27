@@ -1,0 +1,151 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "bop ba"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "o que foi isso?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ah mai nem ferrando"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "skido pee bo pa"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "quais as chances de eu batalhar com voce?\\n"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "onde em pelotas?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "skido?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "verdade, faz sentido."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "deixando isso pra la."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "como posso sair daqui?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "skido pee boo pa bo, stirirupaponopepo."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ah entao, so eu cantar contigo..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "em uma batalha de rap?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "yep"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "nao fazia ideia, que genial."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "nossa ate arrepiei."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "coolswag"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gemaplys",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "enfim, vamos acabar logo com isso."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "BEEP!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "coolswag"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "coolswag"
+		}
+]
+}

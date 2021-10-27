@@ -105,7 +105,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Psych Engine Silver's CUSTOM BUILD" + Application.current.meta.get('version'), 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "BS Custom Engine Prtotype" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -118,6 +118,14 @@ class MainMenuState extends MusicBeatState
 		var leDate = Date.now();
 		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
 			Achievements.achievementsUnlocked[achievementID][1] = true;
+			giveAchievement();
+			ClientPrefs.saveSettings();
+		}
+
+		if (!Achievements.achievementsUnlocked[achievementID][10] && ClientPrefs.easteregg) {
+			Achievements.achievementsUnlocked[achievementID][10] = true;
+			ClientPrefs.easteregg = false; // Soluçao Inteligente
+
 			giveAchievement();
 			ClientPrefs.saveSettings();
 		}

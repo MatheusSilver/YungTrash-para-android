@@ -2,12 +2,16 @@ package;
 
 import flixel.FlxG;
 
+using StringTools;
+
 class Highscore
 {
 	#if (haxe >= "4.0.0")
+	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map();
 	public static var songRating:Map<String, Float> = new Map();
 	#else
+	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map<String, Int>();
 	public static var songRating:Map<String, Float> = new Map<String, Float>();
 	#end
@@ -16,14 +20,14 @@ class Highscore
 	public static function resetSong(song:String, diff:Int = 0):Void
 	{
 		var daSong:String = formatSong(song, diff);
-
 		setScore(daSong, 0);
 		setRating(daSong, 0);
 	}
 
-	public static function resetWeek(week:Int, diff:Int = 0):Void
+	public static function resetWeek(week:String, diff:Int = 0):Void
 	{
-		setScore(formatSong('week' + week, diff), 0);
+		var daWeek:String = formatSong(week, diff);
+		setWeekScore(daWeek, 0);
 	}
 
 	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?rating:Float = -1):Void
@@ -43,17 +47,18 @@ class Highscore
 	}
 
 	public static function saveWeekScore(week:Int = 1, score:Int = 0, ?diff:Int = 0):Void
-	{
-		var daWeek:String = formatSong('week' + week, diff);
-
-		if (songScores.exists(daWeek))
 		{
-			if (songScores.get(daWeek) < score)
+			var daWeek:String = formatSong('week' + week, diff);
+	
+			if (songScores.exists(daWeek))
+			{
+				if (songScores.get(daWeek) < score)
+					setScore(daWeek, score);
+			}
+			else
 				setScore(daWeek, score);
 		}
-		else
-			setScore(daWeek, score);
-	}
+	
 
 	/**
 	 * YOU SHOULD FORMAT SONG WITH formatSong() BEFORE TOSSING IN SONG VARIABLE
@@ -63,6 +68,13 @@ class Highscore
 		// Reminder that I don't need to format this song, it should come formatted!
 		songScores.set(song, score);
 		FlxG.save.data.songScores = songScores;
+		FlxG.save.flush();
+	}
+	static function setWeekScore(week:String, score:Int):Void
+	{
+		// Reminder that I don't need to format this song, it should come formatted!
+		weekScores.set(week, score);
+		FlxG.save.data.weekScores = weekScores;
 		FlxG.save.flush();
 	}
 
@@ -75,9 +87,9 @@ class Highscore
 	}
 
 	public static function formatSong(song:String, diff:Int):String
-	{
-		return song + CoolUtil.difficultyStuff[diff][1];
-	}
+		{
+			return song + CoolUtil.difficultyStuff[diff][1];
+		}
 
 	public static function getScore(song:String, diff:Int):Int
 	{
@@ -96,15 +108,19 @@ class Highscore
 	}
 
 	public static function getWeekScore(week:Int, diff:Int):Int
-	{
-		if (!songScores.exists(formatSong('week' + week, diff)))
-			setScore(formatSong('week' + week, diff), 0);
-
-		return songScores.get(formatSong('week' + week, diff));
-	}
+		{
+			if (!songScores.exists(formatSong('week' + week, diff)))
+				setScore(formatSong('week' + week, diff), 0);
+	
+			return songScores.get(formatSong('week' + week, diff));
+		}
 
 	public static function load():Void
 	{
+		if (FlxG.save.data.weekScores != null)
+		{
+			weekScores = FlxG.save.data.weekScores;
+		}
 		if (FlxG.save.data.songScores != null)
 		{
 			songScores = FlxG.save.data.songScores;
