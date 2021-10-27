@@ -10,7 +10,7 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
-		["Freaky on a Friday Night",	"Jogue numa Sexta... A noite Yeah.",					 false],
+		["[HIPERLINK BLOCKED]",	"Ache a cutscene secreta dentro do game.",					 false],
 		["She Calls Me Daddy Too",		"Beat Week 1 on Hard with no Misses.",					true],
 		["No More Tricks",				"Beat Week 2 on Hard with no Misses.",					true],
 		["Call Me The Hitman",			"Beat Week 3 on Hard with no Misses.",					true],

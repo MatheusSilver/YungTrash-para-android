@@ -114,14 +114,6 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
-		Achievements.loadAchievements();
-		var leDate = Date.now();
-		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
-			Achievements.achievementsUnlocked[achievementID][1] = true;
-			giveAchievement();
-			ClientPrefs.saveSettings();
-		}
-
 		if (!Achievements.achievementsUnlocked[achievementID][10] && ClientPrefs.easteregg) {
 			Achievements.achievementsUnlocked[achievementID][10] = true;
 			ClientPrefs.easteregg = false; // Soluçao Inteligente

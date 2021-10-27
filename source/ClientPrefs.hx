@@ -12,12 +12,12 @@ class ClientPrefs {
 	public static var middleScroll:Bool = false;
 	public static var showFPS:Bool = true;
 	public static var flashing:Bool = true;
-	public static var globalAntialiasing:Bool = false;
+	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = true;
 	public static var framerate:Int = 30;
 	public static var cursing:Bool = true;
-	public static var violence:Bool = true;
+	public static var violence:Bool = false;
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
 	public static var noteOffset:Int = 0;

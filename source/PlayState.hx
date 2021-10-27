@@ -1192,7 +1192,7 @@ class PlayState extends MusicBeatState
 		switch(type) {
 			case 0:
 				if(!boyfriendMap.exists(newCharacter)) {
-					var newBoyfriend:Boyfriend = new Boyfriend(0, 0, newCharacter);
+					var newBoyfriend:Boyfriend = new Boyfriend(BF_X, BF_Y, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
 					startCharacterPos(newBoyfriend);
@@ -1201,7 +1201,7 @@ class PlayState extends MusicBeatState
 
 			case 1:
 				if(!dadMap.exists(newCharacter)) {
-					var newDad:Character = new Character(0, 0, newCharacter);
+					var newDad:Character = new Character(DAD_X, DAD_Y, newCharacter);
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
 					startCharacterPos(newDad);
@@ -1210,7 +1210,7 @@ class PlayState extends MusicBeatState
 
 			case 2:
 				if(!gfMap.exists(newCharacter)) {
-					var newGf:Character = new Character(0, 0, newCharacter);
+					var newGf:Character = new Character(GF_X, GF_Y, newCharacter);
 					newGf.scrollFactor.set(0.95, 0.95);
 					gfMap.set(newCharacter, newGf);
 					gfGroup.add(newGf);
@@ -2100,11 +2100,12 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingString == '?') {
-			scoreTxt.text = 'Pontos: ' + songScore + ' | Nota: ' + ratingString;
+			scoreTxt.text = 'Pontos: ' + songScore + ' | Erros: ' + songMisses + ' | Nota: ' + ratingString;
 		} else {
-			scoreTxt.text = 'Pontos: ' + songScore + ' | Nota: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
+			scoreTxt.text = 'Pontos: ' + songScore + ' | Erros: ' + songMisses + ' | Nota: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
 		}
 
+		
 		if(cpuControlled) {
 			botplaySine += 180 * elapsed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
@@ -2983,12 +2984,12 @@ class PlayState extends MusicBeatState
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.0475;
+					health -= 0.09;
 				}
 			});
 			for (daNote in unspawnNotes) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.0475;
+					health -= 0.09;
 				}
 			}
 
@@ -3617,6 +3618,7 @@ class PlayState extends MusicBeatState
 		health -= daNote.missHealth; //For testing purposes
 		//trace(daNote.missHealth);
 		songMisses++;
+		combo = 0;
 		vocals.volume = 0;
 		RecalculateRating();
 
@@ -3646,19 +3648,20 @@ class PlayState extends MusicBeatState
 
 	function noteMissPress(direction:Int = 1, ?ghostMiss:Bool = false):Void //You pressed a key when there was no notes to press for this key
 	{
+		combo = 0;
 		if (!boyfriend.stunned)
 		{
-			health -= 0.04;
+			health -= 0.08;
 			if (combo > 5 && gf.animOffsets.exists('sad'))
 			{
 				gf.playAnim('sad');
 			}
-			combo = 0;
 
 			if(!practiceMode) songScore -= 10;
 			if(!endingSong) {
 				if(ghostMiss) ghostMisses++;
 				songMisses++;
+				combo =0;
 			}
 			RecalculateRating();
 
@@ -3724,9 +3727,10 @@ class PlayState extends MusicBeatState
 				if (ClientPrefs.violence) //Reaproveitando por preguiça
 					{
 						var hitsound:FlxSound = new FlxSound().loadEmbedded(Paths.sound('osu', 'shared'));
-						hitsound.volume = 0.3;
+						hitsound.volume = 0.8;
 						hitsound.play();
 					}
+
 				popUpScore(note);
 				combo += 1;
 				if(combo > 9999) combo = 9999;
@@ -4201,7 +4205,7 @@ class PlayState extends MusicBeatState
 
 		var ret:Dynamic = callOnLuas('onRecalculateRating', []);
 		if(ret != FunkinLua.Function_Stop) {
-			ratingPercent = songScore / ((songHits + songMisses - ghostMisses) * 350);
+			ratingPercent = songScore / ((songHits + songMisses - ghostMisses) * 345); //hmmmmmm math?
 			if(!Math.isNaN(ratingPercent) && ratingPercent < 0) ratingPercent = 0;
 
 			if(Math.isNaN(ratingPercent)) {

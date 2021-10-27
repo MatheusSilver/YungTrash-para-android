@@ -6,7 +6,6 @@ import Discord.DiscordClient;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
@@ -63,7 +62,7 @@ class OptionsState extends MusicBeatState
 		}
 		changeSelection();
 
-		addVirtualPad(FULL, A_B);
+		addVirtualPad(UP_DOWN, A_B);
 
 		super.create();
 	}

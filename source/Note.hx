@@ -34,7 +34,7 @@ class Note extends FlxSprite
 
 	public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
-	private var earlyHitMult:Float = 0.5;
+	private var earlyHitMult:Float = 0.3; //teste
 
 	public static var swagWidth:Float = 160 * 0.7;
 	public static var PURP_NOTE:Int = 0;
@@ -60,7 +60,7 @@ class Note extends FlxSprite
 	public var copyAlpha:Bool = true;
 
 	public var hitHealth:Float = 0.023;
-	public var missHealth:Float = 0.0475;
+	public var missHealth:Float = 0.09;
 
 	public var texture(default, set):String = null;
 
@@ -93,7 +93,7 @@ class Note extends FlxSprite
 					if(isSustainNote) {
 						missHealth = 0.1;
 					} else {
-						missHealth = 0.3;
+						missHealth = 0.6;
 					}
 					hitCausesMiss = true;
 				case 'No Animation':
@@ -318,7 +318,7 @@ class Note extends FlxSprite
 		{
 			// ok river
 			if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset
-				&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * earlyHitMult))
+				&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * earlyHitMult)) //da proxima vez, eu faço as contas
 				canBeHit = true;
 			else
 				canBeHit = false;
